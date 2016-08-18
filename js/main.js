@@ -1,6 +1,23 @@
 
 $(document).ready(function(){
 
+$("form").submit(function(e) {
+
+    var ref = $(this).find("[required]");
+
+    $(ref).each(function(){
+        if ( $(this).val() == '' )
+        {
+            alert("Заполните поле");
+
+            $(this).focus();
+
+            e.preventDefault();
+            return false;
+        }
+    });  return true;
+});
+
 
     $("a.modal-form").fancybox({
        'hideOnContentClick': true,

@@ -1,29 +1,15 @@
-<?
-if($_SERVER["REQUEST_METHOD"] == "POST") {
- // Функция отправки email
-	function send_mail($to, $subject, $message, $headers) {
+<? 
+if ($_POST["send"]) { 
+  include_once "smsc_api.php"; 
+  $phone = $_POST["phone"];
 
-		$name = $_POST["name"];
-		$email = $_POST["email"];
-		$phone = $_POST["phone"];
+  $r = send_sms(+79780198881, "$phone");
 
-		$to  = "1unitedcrew@gmail.com"; 
+    // $r = array(<id>, <количество sms>, <стоимость>, <баланс>) или array(<id>, -<код ошибки>) 
 
-		$subject = "Заявка"; 
-		$message = "$name<br>$phone<br>$email";
-		$headers  = "Content-type: text/html; charset=utf-8 \r\n";
-		$from = "=?UTF-8?B?".base64_encode("test@test.ru")."?= <test@test.ru>";
-		$headers .= "From: $from\r\n";
-		$headers .= "Reply-To: $email\r\n";
-
-		$result = mail($to, $subject, $message, $headers);
-	} 
-
-	{
-		// Отправка email
-		send_mail($to, $subject, $message, $headers);      
-		echo 'true'; 
-	}
-}
-
+  if ($r[1] > 0) 
+    header('Location:index.html#senks');
+  else 
+    echo "Произошла ошибка № ", -$r[1]; 
+} 
 ?>

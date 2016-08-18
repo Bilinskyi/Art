@@ -505,5 +505,60 @@ footer {
 }
 
 
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 99997;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	display: none;
+	pointer-events: none;
+}
 
+.modalDialog:target {
+	display: block;
+	pointer-events: auto;
+}
+
+.bg-close {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99998;
+	cursor: pointer;
+}
+
+#senks div {
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 24px;
+	line-height: 24px;
+	padding: 10px;
+	background: #005ea5;
+	background: -moz-linear-gradient(left, #00b3ec 0%, #005ea5 100%);
+	background: -o-linear-gradient(left, #00b3ec 0%, #005ea5 100%);
+	background: -webkit-linear-gradient(left, #00b3ec 0%, #005ea5 100%);
+	background: -ms-linear-gradient(left, #00b3ec 0%, #005ea5 100%);
+	background: linear-gradient(left, #00b3ec 0%, #005ea5 100%);
+}
+
+.modalDialog > div {
+	max-width: 320px;
+	width: 90%;
+	position: relative;
+	margin: 10% auto;
+	background: black;
+	z-index: 99999;
+	border: 3px solid #6c6b6b;
+	border-radius: 15px;
+}
 
