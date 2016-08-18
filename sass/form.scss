@@ -1,14 +1,27 @@
 input:not([type=submit]) {
-  
+  border: 1px solid #d9d3bb;
+  width: 180px;
+  height: 35px;
+  color: #e5e5e5;
+  outline: none;
+  color: #000;
+  font-size: 13px;
+  font-family: $light;
+  background: transparent;
+  border-radius: 35px;
+  padding-left: 15px;
+  padding-right: 5px;
 }
 
-input[type=submit] {
+input.btn[type=submit] {
   display: inline-block;
   outline: none;
   border: none;
-  
+  height: 35px;
+  line-height: 35px;
   &:hover {
-    background: #6db82a;
+    // background: #6db82a;
+    cursor: pointer;
   }
   &:active {
     transform: translateY(1px);

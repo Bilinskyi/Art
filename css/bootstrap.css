@@ -84,11 +84,11 @@ hr {
     width: 970px;
   }
 }
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
-}
+}*/
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -764,7 +764,7 @@ hr {
   float: left !important;
 }
 .hide {
-  display: none !important;
+  display: none;
 }
 .show {
   display: block !important;

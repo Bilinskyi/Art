@@ -1,7 +1,7 @@
-::-webkit-input-placeholder {font-family: 'latoRegular';color: white;font-size: 18px;}
-::-moz-placeholder {font-family: 'latoRegular';color: white;font-size: 18px;}/* Firefox 19+ */
-:-moz-placeholder {font-family: 'latoRegular';color: white;font-size: 18px;}/* Firefox 18- */
-:-ms-input-placeholder {font-family: 'latoRegular';color: white;font-size: 18px;}
+::-webkit-input-placeholder {font-family: $light;color: #c9c1aa;font-size: 13px;}
+::-moz-placeholder {font-family: $light;color: #c9c1aa;font-size: 13px;}/* Firefox 19+ */
+:-moz-placeholder {font-family: $light;color: #c9c1aa;font-size: 13px;}/* Firefox 18- */
+:-ms-input-placeholder {font-family: $light;color: #c9c1aa;font-size: 13px;}
 
 * {box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
 .inline-center{text-align: center;}
@@ -16,9 +16,17 @@
 .flow-hidden {overflow: hidden}
 body {
   position: relative; 
-  color: #fff;
-  font-family: 'latoRegular';
-  min-width: 1200px;
+  color: #000;
+  font-family: $reg;
+}
+
+h1 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+b, strong {
+  font-family: $bold;
 }
 
 ul {

@@ -5,13 +5,13 @@
 
         function init(){ 
             myMap = new ymaps.Map ("map-canvas", {
-                center: [55.660049, 37.619585],
-                zoom: 10
+                center: [44.607012, 33.508135],
+                zoom: 16
             }); 
             
    
 
-var myPlacemark = new ymaps.Placemark([55.660049, 37.619585], {
+var myPlacemark = new ymaps.Placemark([44.607012, 33.508135], {
 	hintContent: 'TEXT'
 }, 
 {
